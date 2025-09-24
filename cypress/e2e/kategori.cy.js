@@ -81,16 +81,21 @@ describe("Login-OrangeHRM", () => {
   //   .click();
   // });
 
-  // it("TC_006 - Edit", () => {
+  // it("TC_007 - Edit", () => {
   //   kategoriPage.menuKategori();
   //   cy.get(':nth-child(1) > .text-center > .btn-group > .btn-warning')
   //   .click();
 
-  //   kategoriPage.kategoriEditInput();
-  //   kategoriPage.kategoriInput(kategoriData["kategori-text"]);
+  //   kategoriPage.kategoriEditInput(kategoriData["kategori-text"]);
+
   //   kategoriPage.btnSimpanKategori();
   //   kategoriPage.verifikasiAlertSuccess();
   // });
 
+  // it("TC_008 - Hapus", () => {
+  //   kategoriPage.menuKategori();
+  //   kategoriPage.deleteKategori();
+  //   kategoriPage.verifikasiAlertSuccess();
+  // });
   
 });

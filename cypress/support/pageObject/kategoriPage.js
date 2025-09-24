@@ -62,6 +62,16 @@ class kategoriPage {
       .should("be.visible")
       .and("have.value", nama);
   }
+
+  deleteKategori() {
+    cy.get(':nth-child(1) > .text-center > .btn-group > .d-inline > .btn')
+    .click();
+
+    cy.on('window:confirm', (str) => {
+      expect(str).to.equal('Apakah Anda yakin ingin menghapus kategori ini?');
+      return true;
+    });
+  }
 }
 
 export default new kategoriPage();
