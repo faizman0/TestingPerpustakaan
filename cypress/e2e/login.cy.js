@@ -2,7 +2,7 @@ import loginPage from "../support/pageObject/loginPage";
 import loginData from "../fixtures/loginData.json";
 import { log } from "console";
 
-describe('Login-OrangeHRM', () => {
+describe('Login', () => {
 
     beforeEach(() => {
         cy.visit('http://127.0.0.1:8000/login');
@@ -39,13 +39,12 @@ describe('Login-OrangeHRM', () => {
         loginPage.verifyLoginError();
     });
 
-    // it('TC_004 - Login dengan username dan password kosong', () => {
-    //     cy.intercept('GET', 'https://opensource-demo.orangehrmlive.com/web/index.php/core/i18n/messages').as('loginRequest');
+    it('TC_004 - Login dengan username dan password kosong', () => {
 
-    //     loginPage.loginButton();
+        loginPage.loginButton();
 
-    //     loginPage.requiredMessage();
-    // });
+        loginPage.requiredMessage();
+    });
 
     it('TC_005 - Login dengan tombol enter', () => {
         cy.intercept('GET', '**/dashboard').as('loginRequest');

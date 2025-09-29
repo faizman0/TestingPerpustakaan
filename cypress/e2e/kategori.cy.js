@@ -4,7 +4,7 @@ import kategoriPage from "../support/pageObject/kategoriPage";
 import kategoriData from "../fixtures/kategoriData.json";
 import { log } from "console";
 
-describe("Login-OrangeHRM", () => {
+describe("Kategori", () => {
   beforeEach(() => {
     cy.visit("http://127.0.0.1:8000/login");
 
